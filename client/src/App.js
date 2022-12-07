@@ -1,23 +1,18 @@
 // import logo from './logo.svg';
 import './App.css';
+import LogInForm from './components/LogInform';
+import Navbar from './components/Navbar';
+
+// import React, {useEffect, useState} from 'react'
+
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src="" className="App-logo" alt="logo" />
-        <p>
-          WHERE EDUCATION MEETS TECHNOLOGY. 
-          
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-           TECHNOLOGY FOR STUDENTS, TEACHERS AND PARENTS/GUARDIAN.
-        </a>
+        {/* <img src="beth-jnr-NtfFqT8JBI0-unsplash.jpg" className="App-logo" alt="logo" /> */}
+        <Navbar/>
+        <LogInForm/>
       </header>
     </div>
   );

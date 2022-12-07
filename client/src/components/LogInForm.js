@@ -12,7 +12,7 @@ function LogInForm({onLogin}) {
             headers: {
                 "Content-Type": "application/json",
             },
-            body: json.stringify({username, password}),
+            body: JSON.stringify({username, password}),
         }) .then((r) => {
             if (r.ok) {
                 r.json() .then ((user) => onLogin(user));
@@ -24,7 +24,6 @@ function LogInForm({onLogin}) {
     }
 return (
     <form onSubmit={handleSubmit}>
-<FormField>
     <label htmlFor="username">username</label>
     <input 
     type="text"
@@ -32,8 +31,6 @@ return (
     value="{username}"
     autoComplete="off"
     onChange={(e) => setUsername(e.target.value)} ></input>
-</FormField>
-<FormField>
     <label htmlFor= "password">Password</label>
     <input
     type = "password"
@@ -42,12 +39,9 @@ return (
     value = {password}
     onChange={(e) => setPassword(e.target.value)}>
     </input>
-</FormField>
-<FormField>
-    {errors.map((err) => (
-        <Error key= {err}>{err}</Error>
-   ))}; 
-</FormField>
+    {/* {errors.map((err) => ( */}
+        {/* <Errors key= {err}>{err}</Errors> */}
+   {/* ))};  */}
     </form>
     );
 }

@@ -1,7 +1,7 @@
 import "./NavbarStyles.css";
 import React from 'react';
 import Contact from "./Contact";
-import { Route} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 function NavBar(){
     return(
         <>
@@ -11,9 +11,9 @@ function NavBar(){
             </a>
             <div>
                 <ul id="navbar">
-                <Route path="/" exact element={<Contact/>} />
+                {/* <Route path="/Contact" exact element={<Contact/>} /> */}
         
-                    {/* <li><Link to='./Contact'>Contact Us</Link></li> */}
+                    <li><Link to='./Contact'>Contact Us</Link></li>
                 </ul>
             </div>
         </nav>

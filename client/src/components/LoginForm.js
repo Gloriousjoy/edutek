@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Button, Error, Input, FormField, Label } from "../styles";
+import NavBar from "./NavBar";
 
 function LoginForm({ onLogin }) {
   const [username, setUsername] = useState("");
@@ -27,6 +28,7 @@ function LoginForm({ onLogin }) {
   }
 
   return (
+    
     <form onSubmit={handleSubmit}>
       <FormField>
         <Label htmlFor="username">Username</Label>
@@ -51,11 +53,6 @@ function LoginForm({ onLogin }) {
         <Button variant="fill" color="primary" type="submit">
           {isLoading ? "Loading..." : "Login"}
         </Button>
-      </FormField>
-      <FormField>
-        {errors.map((err) => (
-          <Error key={err}>{err}</Error>
-        ))}
       </FormField>
     </form>
   );

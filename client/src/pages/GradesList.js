@@ -1,27 +1,30 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import NavBar from "../components/NavBar";
 import { Button } from "../styles";
 
 function GradesList() {
   const [ grades, setGrades] = useState([]);
 
-  useEffect(() => {
-    fetch("/grades")
-      .then((r) => r.json())
-      .then(setGrades);
-  }, []);
+  useEffect(()=>{
+    fetch('http://localhost:3000/grades')
+      .then(res => res.json())
+      .then(data => setGrades(data))
+  })
 
 
   return (
     <Wrapper>
-      {grades.length > 0 ? (
-        grades.map((grade) => (
-          <Grade key={grade.id}>
-              <p>
+      <NavBar />
+       <p>
               AT EDUTEK, WE FOCUS ON PROGRESS OVER PERFECTION. <br/>
                 THERE IS ALWAYS ROOM FOR IMPROVEMENT.
               </p>
+      {grades.length > 0 ? (
+        grades.map((grade) => (
+          <Grade key={grade.id}>
+             
               <h2>{grade.student_name}</h2>
               <h3>{grade.Mathematics}</h3>
               <h3>{grade.English}</h3>

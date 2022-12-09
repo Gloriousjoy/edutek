@@ -1,12 +1,14 @@
 import { useState } from "react";
 import styled from "styled-components";
 import LoginForm from "../components/LoginForm";
+import NavBar from "../components/NavBar";
 import { Button } from "../styles";
 
 function Login({ onLogin }) {
     const [showLogin, setShowLogin] = useState(true);
     return (
         <Wrapper>
+          <NavBar />
           <Logo>EDUTEK</Logo>
           {showLogin ? (
             <>

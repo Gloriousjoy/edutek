@@ -8,6 +8,6 @@
 user = User.create(name: "Raven")
 grades = ['A','A-', 'B+', 'B', 'B-', 'C+', 'C', 'C-']
 
-5.times do
+10.times do
     Grade.create(student_name: Faker::Name.name, Mathematics: grades.sample, Chemistry: grades.sample, English: grades.sample, user_id: user.id ) 
 end

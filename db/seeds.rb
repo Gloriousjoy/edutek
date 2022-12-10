@@ -5,7 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-user = User.create(name: "Raven")
+user = User.create(name: "Raven", password_digest: 01234)
 grades = ['A','A-', 'B+', 'B', 'B-', 'C+', 'C', 'C-']
 
 10.times do

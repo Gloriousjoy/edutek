@@ -12,7 +12,7 @@ function NavBar(){
             <div>
                 <ul id="navbar">
                 {/* <Route path="/Contact" exact element={<Contact/>} /> */}
-        
+                {/* <li> Link to='</li> */}
                     <li><Link to='./Contact'>Contact Us</Link></li>
                 </ul>
             </div>

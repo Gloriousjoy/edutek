@@ -1,5 +1,5 @@
 class GradesController < ApplicationController
-    before_action :authorize, except: [:index]
+    # skip_before_action :authorize
     def index
         render json: Grade.all
     end
@@ -9,7 +9,7 @@ class GradesController < ApplicationController
         render json: grade
     end
     def create
-        grade = Grade.create!(student_name: grade_params[:student_name], Mathematics: grade_params[:Mathematics], Chemistry: grade_params[:Chemistry], English: grade_params[:English])
+        grade = Grade.create(grade_params)
         render json: grade
     end
 
@@ -23,9 +23,7 @@ class GradesController < ApplicationController
     end
     private
     def grade_params
-        params.permit(:student_name, :Mathematics, :Chemistry, :English)
+        params.permit(:student_name, :Mathematics, :Chemistry, :English, :user_id)
     end
-    def authorize
-		return render json: {errors: ["Not authorized"]}, status: :unauthorized unless session.include? :user_id
-	end
+   
 end

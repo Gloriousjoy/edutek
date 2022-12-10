@@ -16,7 +16,6 @@ function GradesList() {
 
   return (
     <Wrapper>
-      <NavBar />
        <p>
               AT EDUTEK, WE FOCUS ON PROGRESS OVER PERFECTION. <br/>
                 THERE IS ALWAYS ROOM FOR IMPROVEMENT.
@@ -26,9 +25,9 @@ function GradesList() {
           <Grade key={grade.id}>
              
               <h2>{grade.student_name}</h2>
-              <h3>{grade.Mathematics}</h3>
-              <h3>{grade.English}</h3>
-              <h3>{grade.Chemistry}</h3>
+              <h3>Mathematics: {grade.Mathematics}</h3>
+              <h3>English: {grade.English}</h3>
+              <h3>Chemistry: {grade.Chemistry}</h3>
           </Grade>
         ))
       ) : (

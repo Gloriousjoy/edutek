@@ -1,7 +1,3 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 nav{
     display: flex;
     align-items: center;
@@ -13,6 +9,11 @@ nav{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.companyslogan{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 500;
+    font-style: inherit;
 }
 
 #navbar li{

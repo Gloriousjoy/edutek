@@ -2,18 +2,17 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './components/App';
-import { BrowserRouter as Routes, Route} from "react-router-dom";
+import { BrowserRouter as Router, Route} from "react-router-dom";
 import About from "./components/About"
 
 // import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
-<BrowserRouter>
-<Routes>
-            <Route path="/" element={<About />} />
-            </Routes>
+<Router>
+
+        <Route path="/" element={<About />} />
     <App />
-</BrowserRouter>,
+</Router>,
 document.getElementById('root')
 );
 

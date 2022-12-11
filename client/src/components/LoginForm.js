@@ -28,7 +28,9 @@ function LoginForm({ onLogin }) {
   }
 
   return (
-    
+    <div>
+    <NavBar />
+      
     <form onSubmit={handleSubmit}>
       <FormField>
         <Label htmlFor="username">Username</Label>
@@ -55,6 +57,7 @@ function LoginForm({ onLogin }) {
         </Button>
       </FormField>
     </form>
+    </div>
   );
 }
 

@@ -1,4 +1,6 @@
 import React from "react";
+import "./contact.css"
+import NavBar from "./NavBar"
 
 function contact() {
     return (

@@ -5,7 +5,7 @@ import App from './components/App';
 import { BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import About from "./components/About";
 import Contact from "./components/Contact";
-import LoginForm from "./components/LoginForm"
+import Login from "./pages/Login"
 import NewStudent from "./pages/NewStudent"
 // import reportWebVitals from './reportWebVitals';
 
@@ -15,7 +15,7 @@ ReactDOM.render(
     <Route path="/" element={<App />} />
     <Route path="/About" element={<About />} />
     <Route path="/Contact" element={<Contact />} />
-    <Route path='/LoginForm' element={<LoginForm/>} />
+    <Route path='/Login' element={<Login/>} />
     <Route path='/pages/new-student' element={<NewStudent/>} />
     </Routes>
 </Router>,

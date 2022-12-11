@@ -1,8 +1,7 @@
-import { useState } from "react";
-import { useHistory } from "react-router";
+import { useState }from "react";
+import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
-// import { useHistory } from
-import { Button, Error, FormField, Input, Label, Textarea } from "../styles";
+import { Button, Error, FormField, Input, Label } from "../styles";
 
 
 function NewStudent({ user }) {
@@ -12,7 +11,7 @@ const [chemistry, setChemistry] = useState("");
 const [english, setEnglish] = useState("");
 const [errors, setErrors] = useState([]);
 const [isLoading, setIsLoading] = useState(false);
-const history = useHistory();
+const navigate = useNavigate();
 
 function handleSubmit(e) {
   e.preventDefault();
@@ -24,14 +23,14 @@ function handleSubmit(e) {
     },
     body: JSON.stringify({
       studentname,
-      Mathematics,
-      English,
-      Chemistry
+      mathematics,
+      english,
+      chemistry
     }),
   }).then((r) => {
     setIsLoading(false);
     if (r.ok) {
-      history.push("/");
+      navigate("/");
     } else {
       r.json().then((err) => setErrors(err.errors));
     }
@@ -71,7 +70,7 @@ return (
             <Input
               type="text"
               value={english}
-              onChange={(e) => setMathematics(e.target.value)}
+              onChange={(e) => setEnglish(e.target.value)}
             />
           </FormField>
           <FormField>
@@ -102,4 +101,4 @@ const WrapperChild = styled.div`
   flex: 1;
 `;
 
-export default NewRecipe;
+export default NewStudent;

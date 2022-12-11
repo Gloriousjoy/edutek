@@ -2,8 +2,6 @@ import "./NavbarStyles.css";
 import React from 'react';
 // import Contact from "./Contact";
 import { NavLink } from 'react-router-dom';
-import LoginForm from "./LoginForm";
-import About from "./About";
 
 function NavBar(){
     return(
@@ -18,8 +16,8 @@ function NavBar(){
                 <div>
                 <ul className="navbar">
                 <li><NavLink to="/About">About</NavLink></li>
-                <li><NavLink to="Contact">Contact Us </NavLink> </li>
-                <li><NavLink to="LoginForm">LogInForm</NavLink></li>
+                <li><NavLink to="/Contact">Contact Us </NavLink> </li>
+                <li><NavLink to="/LoginForm">LogInForm</NavLink></li>
                 </ul>
             </div>
         </nav>

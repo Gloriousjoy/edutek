@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useHistory } from "react-router";
 import styled from "styled-components";
+// import { useHistory } from
 import { Button, Error, FormField, Input, Label, Textarea } from "../styles";
 
 
@@ -50,26 +51,26 @@ return (
             />
             </FormField>
           <FormField>
-            <Label htmlFor="Mathematics">Title</Label>
+            <Label htmlFor="mathematics"> Mathematics</Label>
             <Input
               type="text"
-              value={Mathematics}
+              value={mathematics}
               onChange={(e) => setMathematics(e.target.value)}
             />
           </FormField>
           <FormField>
-            <Label htmlFor="Chemistry">Chemistry</Label>
+            <Label htmlFor="chemistry">Chemistry</Label>
             <Input
               type= "text"
-              value={Chemistry}
+              value={chemistry}
               onChange={(e) => setChemistry(e.target.value)}
             />
           </FormField>
           <FormField>
-            <Label htmlFor="English">English</Label>
+            <Label htmlFor="english">English</Label>
             <Input
               type="text"
-              value={Mathematics}
+              value={english}
               onChange={(e) => setMathematics(e.target.value)}
             />
           </FormField>

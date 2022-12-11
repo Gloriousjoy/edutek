@@ -34,7 +34,7 @@ function GradesList() {
         <>
 
           <h2>No Grades Found</h2>
-          <Button as={Link} to="/new">
+          <Button as={Link} to="/new-student">
             Create new student
           </Button>
         </>

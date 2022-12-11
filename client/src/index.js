@@ -2,16 +2,22 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './components/App';
-import { BrowserRouter as Router, Route} from "react-router-dom";
-import About from "./components/About"
-
+import { BrowserRouter as Router, Route, Routes} from "react-router-dom";
+import About from "./components/About";
+import Contact from "./components/Contact";
+import LoginForm from "./components/LoginForm"
+import NewStudent from "./pages/NewStudent"
 // import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
 <Router>
-
-        <Route path="/" element={<About />} />
-    <App />
+    <Routes>
+    <Route path="/" element={<App />} />
+    <Route path="/About" element={<About />} />
+    <Route path="/Contact" element={<Contact />} />
+    <Route path='/LoginForm' element={<LoginForm/>} />
+    <Route path='/pages/new-student' element={<NewStudent/>} />
+    </Routes>
 </Router>,
 document.getElementById('root')
 );

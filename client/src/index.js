@@ -7,10 +7,14 @@ import About from "./components/About";
 import Contact from "./components/Contact";
 import Login from "./pages/Login"
 import NewStudent from "./pages/NewStudent"
+import NavBar from './components/NavBar';
 // import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
 <Router>
+    <div>
+        <NavBar />
+    </div>
     <Routes>
     <Route path="/" element={<App />} />
     <Route path="/About" element={<About />} />

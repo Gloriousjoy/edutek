@@ -18,7 +18,7 @@ function GradesList() {
     <Wrapper>
        <p>
               AT EDUTEK, WE FOCUS ON PROGRESS OVER PERFECTION. <br/>
-                THERE IS ALWAYS ROOM FOR IMPROVEMENT.
+                THERE IS ALWAYS ROOM FOR IMPROVEMENT, FOR YOURSELF, BY YOURSELF!
               </p>
       {grades.length > 0 ? (
         grades.map((grade) => (

@@ -29,8 +29,6 @@ function LoginForm({ onLogin }) {
 
   return (
     <div>
-    <NavBar />
-      
     <form onSubmit={handleSubmit}>
       <FormField>
         <Label htmlFor="username">Username</Label>

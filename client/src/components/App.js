@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 // import { Switch, Route } from "react-router-dom";
 import NavBar from "./NavBar";
-import Login from "../pages/Login";
+import Login from "./Login";
 import GradesList from "../pages/GradesList";
 
 
@@ -22,7 +22,6 @@ function App() {
 
   return (
     <>
-      <NavBar /> 
       {/* user={user} setUser={setUser}  */}
       <GradesList />
       </>);
